@@ -359,6 +359,14 @@ strong { color: var(--text); font-weight: 600; }
 }
 .highlight .k { font-family: var(--font-head); font-size: 1.05rem; color: var(--text); }
 .highlight .v { color: var(--muted); font-size: 0.92rem; }
+/* image-backed highlight cards: lighter overlay + min height so the photo reads */
+.highlight.media-bg {
+  min-height: 150px;
+  background:
+    linear-gradient(180deg, rgba(8,12,24,0.32), rgba(8,12,24,0.78)),
+    var(--media) center/cover no-repeat;
+}
+.highlight.media-bg .k, .highlight.media-bg .v { text-shadow: 0 1px 10px rgba(0,0,0,0.85); }
 
 /* ---------- Imagery: photo backgrounds ---------- */
 /* faint starfield behind the home hero (works in both themes) */
@@ -366,11 +374,11 @@ strong { color: var(--text); font-weight: 600; }
 .hero::before {
   content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
   background: var(--hero-media, none) center/cover no-repeat;
-  opacity: 0.20;
-  -webkit-mask-image: linear-gradient(180deg, #000 45%, transparent 96%);
-          mask-image: linear-gradient(180deg, #000 45%, transparent 96%);
+  opacity: 0.55;
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
+          mask-image: linear-gradient(180deg, #000 55%, transparent 98%);
 }
-[data-theme="light"] .hero::before { opacity: 0.10; }
+[data-theme="light"] .hero::before { opacity: 0.22; }
 
 /* dark photo tile: an image background with a fixed dark overlay + light text,
    so it reads as an intentional photo card in both light and dark themes */
@@ -395,11 +403,56 @@ strong { color: var(--text); font-weight: 600; }
     var(--media) center/cover no-repeat;
   color: #eef2fb;
 }
+/* lighter overlay + extra vertical room for dark night-sky photos,
+   so a wide-but-short band still shows the image (e.g. star trails) */
+.band-night {
+  min-height: clamp(280px, 32vw, 420px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(180deg, rgba(8,12,24,0.12) 0%, rgba(8,12,24,0.18) 45%, rgba(8,12,24,0.48) 100%),
+    var(--media) 50% 22% / cover no-repeat;
+}
+.band-night h2, .band-night .eyebrow, .band-night p, .band-night .media-credit {
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+.band-night .eyebrow { color: #cfe3ff; }
 .band h2 { color: #ffffff; }
 .band p, .band .prose p { color: #d7deec; }
 .band strong { color: #ffffff; }
 .band a { color: var(--accent-strong); }
 .media-credit { display: block; margin-top: 0.7rem; font-size: 0.72rem; color: rgba(231,238,250,0.7); }
+
+/* two-column band: text alongside a photo (e.g. Observations) */
+.band-split {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: clamp(1.2rem, 4vw, 2.6rem);
+  align-items: center;
+}
+.band-figure { margin: 0; }
+.band-figure img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: var(--shadow);
+}
+@media (max-width: 760px) { .band-split { grid-template-columns: 1fr; } }
+
+/* ---------- Background image sources ----------
+   Declared in THIS stylesheet (not inline) on purpose: a url() inside a CSS
+   custom property is resolved relative to the stylesheet that declares it.
+   Authoring the paths here as ../img/* makes them resolve to /assets/img/*
+   consistently across browsers (Firefox resolved inline-declared paths
+   relative to this file, causing /assets/css/assets/img/* 404s). */
+.bg-milkyway   { --hero-media: url("../img/tng-milkyway.jpg"); }
+.bg-startrails { --media: url("../img/tng-startrails.jpg"); }
+.bg-tng-sunset { --media: url("../img/tng-dome-sunset.jpg"); }
+.bg-tng-pano   { --media: url("../img/tng-sunset-pano.jpg"); }
+.bg-elt        { --media: url("../img/elt.jpg"); }
+.bg-wasp107    { --media: url("../img/wasp-107b.jpg"); }
+.bg-hotjupiter { --media: url("../img/hot-jupiter.jpg"); }
 .credits-line { width: 100%; margin-top: 0.6rem; font-size: 0.72rem; color: var(--muted); line-height: 1.55; }
 
 /* Feature block (icon + text) */
