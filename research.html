@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Francesco Amadori</title>
+<meta name="description" content="Exoplanet atmospheric characterization with high- and low-resolution spectroscopy and Bayesian retrievals: the GUIBRUSHR pipeline, pyExoRaMa, observations at the TNG, and earlier work in solar physics instrumentation.">
+<link rel="canonical" href="https://www.francescoamadoriastronomy.com/research.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Research · Francesco Amadori">
+<meta property="og:description" content="Exoplanet atmospheres, high-resolution spectroscopy, Bayesian retrievals, and the GUIBRUSHR pipeline.">
+<meta property="og:image" content="https://www.francescoamadoriastronomy.com/assets/img/Profilo1.jpeg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>Francesco&nbsp;Amadori</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="cv.html">CV &amp; Publications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn theme-toggle" type="button" aria-label="Toggle light/dark theme" aria-pressed="false">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+      <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Research</p>
+      <h1>From spectra to atmospheres</h1>
+      <p>My research turns starlight into chemistry. I develop the software and methods that let us characterize exoplanet atmospheres across resolutions and instruments, and I use them on real data, all the way from the telescope to the posterior distribution.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <div class="grid grid-2">
+        <div class="feature card reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-7 4 14 2-7h4"/></svg></div>
+          <div><h3>High-resolution spectroscopy</h3><p>Resolving individual molecular lines (and atomic lines in the visible) to detect species via cross-correlation, using high-resolution spectrographs such as GIANO-B at the Telescopio Nazionale Galileo (TNG), HARPS-N, ESPRESSO, IGRINS and, soon, ANDES at the Extremely Large Telescope (ELT).</p></div>
+        </div>
+        <div class="feature card reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15c3 0 4-7 9-7s6 7 9 7"/></svg></div>
+          <div><h3>Low-resolution spectroscopy</h3><p>Capturing the broad shape of the spectrum with space telescopes (e.g. the James Webb Space Telescope, JWST, and the Hubble Space Telescope, HST; and, in the future, the Ariel mission) to constrain overall abundances and clouds.</p></div>
+        </div>
+        <div class="feature card reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5m0 14h16M8 16l3-4 3 3 4-6"/></svg></div>
+          <div><h3>Bayesian retrievals</h3><p>Differential-evolution MCMC over large model grids, at both low and high resolution, to infer temperatures, pressures and abundances with related uncertainties.</p></div>
+        </div>
+        <div class="feature card reveal">
+          <div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M3 12h3M18 12h3M12 3v3M12 18v3"/></svg></div>
+          <div><h3>Multi-resolution synergy</h3><p>Combining low-resolution space data (e.g. JWST, HST; and, in the future, Ariel) with ground-based high-resolution spectra to break parameter degeneracies.</p></div>
+        </div>
+      </div>
+
+      <!-- GUIBRUSHR -->
+      <article class="cv-section reveal" id="guibrush">
+        <h2>GUIBRUSHR&reg;</h2>
+        <p class="section-lead">Graphic User Interface for Bayesian Retrieval Using Spectroscopy at High Resolution</p>
+        <div class="prose mt-3">
+          <p>GUIBRUSHR is the flagship pipeline I develop with the exoplanet group at INAF–OATo. Its scientific aim is to measure what exoplanet atmospheres are made of, and to connect that composition to how planets form and evolve. To get there it brings together, in one tool, analysis steps that are usually scattered across separate codes, and it is built to make a normally complex, error-prone process straightforward: an intuitive interface replaces long configuration files, and streamlined data management handles large astronomical datasets.</p>
+          <p>I led the rewrite of the original <strong>IDL</strong> codebase into <strong>Python</strong>, adding CPU parallelization that sharply cut execution times, and I'm now extending it with GPU parallelization of the radiative-transfer step. The software generates transmission and emission models for clear and cloudy atmospheres using radiative-transfer engines such as <strong>petitRADTRANS</strong> and <strong>PyratBay</strong>, and explores parameter space with <strong>differential-evolution MCMC</strong> retrievals and real-time visualization.</p>
+          <p class="tags">
+            <a class="tag accent" href="https://www.ict.inaf.it/gitlab/guibrushr/guibrushr" target="_blank" rel="noopener">GitLab repository</a>
+            <a class="tag accent" href="https://www.ict.inaf.it/gitlab/guibrushr/datareductiongianob" target="_blank" rel="noopener">Data Reduction tool</a>
+          </p>
+        </div>
+        <p class="mt-4"><strong>Key modules.</strong> GUIBRUSHR is organized into modules, each handling one step on the path from raw starlight to a planet's atmospheric composition, tied together by a local database that keeps every target, observing night and result reproducible.</p>
+        <div class="grid grid-2 mt-3">
+          <div class="card">
+            <h3>Reading the spectra</h3>
+            <ul class="text-muted" style="padding-left:1.1rem;">
+              <li><strong>Data Reduction</strong>: turns raw high-resolution spectra into calibrated, wavelength-aligned data ready for analysis. Now also a <a href="https://www.ict.inaf.it/gitlab/guibrushr/datareductiongianob" target="_blank" rel="noopener">standalone tool</a> supporting GIANO-B, HARPS-N, CRIRES+ and ESPRESSO.</li>
+              <li><strong>Telluric Removal</strong>: Earth's atmosphere and the host star imprint strong lines that bury the planet's far weaker signal. This module removes them order by order with a PCA-based approach, while preserving the slightly Doppler-shifted planetary lines.</li>
+              <li><strong>Cross-Correlation</strong>: co-adds the thousands of faint molecular lines into a single, statistically significant detection, confirming which species are present from the planet's orbital motion.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Modelling the atmosphere</h3>
+            <ul class="text-muted" style="padding-left:1.1rem;">
+              <li><strong>Forward Model</strong>: builds physical transmission and emission spectra for the expected molecules, the temperature structure and clouds (with petitRADTRANS or PyratBay), used both as cross-correlation templates and as the models compared with the data.</li>
+              <li><strong>Bayesian Retrieval</strong>: a differential-evolution MCMC infers the atmosphere's molecular abundances, temperature structure, clouds and velocities, with proper uncertainties, running on high-resolution, low-resolution or both jointly.</li>
+              <li><strong>Synthetic data &amp; database</strong>: generates realistic mock observations to validate the full chain, while a local SQLite3 database stores targets, observing nights and results for reproducible science.</li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-3 text-muted">GUIBRUSHR has already contributed to peer-reviewed work, including <a href="cv.html#publications">Basilicata et&nbsp;al. (2025)</a>.</p>
+      </article>
+
+      <!-- pyExoRaMa -->
+      <article class="cv-section reveal" id="pyexorama">
+        <h2>pyExoRaMa</h2>
+        <p class="section-lead">An interactive Python tool for the radius–mass diagram of exoplanets</p>
+        <div class="grid grid-2 mt-3" style="align-items:center;">
+          <div class="prose">
+            <p>pyExoRaMa is a Python adaptation of software originally written in Mathematica by Dr. Li Zeng. It lets you visualize and analyze exoplanet and host-star data across many parameters at once. As the exoplanet catalog keeps growing, it supports statistical studies that reveal parameter interdependencies and compare observations against theoretical models.</p>
+            <p class="tags">
+              <a class="tag accent" href="https://github.com/francescoa97outlook/pyExoRaMa" target="_blank" rel="noopener">GitHub</a>
+              <a class="tag accent" href="https://doi.org/10.5281/zenodo.5899601" target="_blank" rel="noopener">Zenodo</a>
+              <a class="tag accent" href="http://ascl.net/code/v/3171" target="_blank" rel="noopener">ASCL</a>
+              <a class="tag accent" href="https://doi.org/10.3847/2515-5172/ac52f2" target="_blank" rel="noopener">RNAAS</a>
+            </p>
+          </div>
+          <figure style="margin:0;">
+            <img src="assets/img/pyexorama_results.jpg" alt="pyExoRaMa radius–mass diagram output" loading="lazy" style="border-radius:var(--radius); border:1px solid var(--border);">
+          </figure>
+        </div>
+      </article>
+
+      <!-- Science: current studies -->
+      <article class="cv-section reveal" id="science">
+        <h2>Atmospheres I'm characterizing</h2>
+        <p class="section-lead">Putting the methods to work on real planets, all the way from data reduction to the posterior distribution.</p>
+        <div class="grid grid-2 mt-3">
+          <div class="card media-bg" style="--media:url('assets/img/wasp-107b.jpg')">
+            <h3>WASP-107b <span class="badge">paper in prep</span></h3>
+            <p>The warm super-Neptune WASP-107b is my main science case. I combine ground-based high-resolution spectroscopy with low-resolution data from space telescopes in a single joint retrieval with GUIBRUSHR, constraining its atmospheric composition and thermal structure far more tightly than either dataset could alone. This was the subject of my MSc thesis and is now being written up for publication, with implications for what future ANDES@ELT observations of smaller planets could achieve.</p>
+          </div>
+          <div class="card media-bg" style="--media:url('assets/img/hot-jupiter.jpg')">
+            <h3>WASP-77Ab <span class="badge">paper in prep</span></h3>
+            <p>WASP-77Ab is a benchmark hot Jupiter with well-characterized high- and low-resolution observations, which makes it the ideal target for validating GUIBRUSHR. I use its combined datasets to confirm that the pipeline recovers the expected abundances and temperature profile, demonstrating that the joint high- plus low-resolution approach is robust before turning it on less-explored worlds.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Observations -->
+      <article class="cv-section reveal band" id="observations" style="--media:url('assets/img/tng-dome.jpg')">
+        <h2>Observations</h2>
+        <div class="prose mt-3">
+          <p>I'm a <strong>primary observer for the GAPS programme</strong> (Global Architecture of Planetary Systems) at the <strong>Telescopio Nazionale Galileo</strong> in La Palma, working with both the HARPS-N and GIANO-B spectrographs, the same high-resolution data that feed my atmospheric models. I also observe at the Asiago Astrophysical Observatory with the University of Padua.</p>
+        </div>
+        <small class="media-credit">Telescopio Nazionale Galileo, La Palma. Photo: G. Tessicini (public domain).</small>
+      </article>
+
+      <!-- Past: solar physics -->
+      <article class="cv-section reveal" id="instrumentation">
+        <h2>Earlier work: solar physics &amp; space instrumentation</h2>
+        <p class="section-lead">Before specializing in exoplanets, I built software for ESA and INAF space missions.</p>
+        <div class="prose mt-3">
+          <p>For several years I developed and validated flight and ground software for solar coronagraphy and space-weather missions. The work ranged from formation-flying metrology and instrument command testing to balloon-borne coronagraphy and operational forecasting of coronal mass ejections, and it gave me the mission-grade software practices I now bring to exoplanet pipelines.</p>
+        </div>
+        <div class="grid grid-2 mt-3">
+          <div class="card"><h3>PROBA-3 / ASPIICS</h3><p>End-to-end MATLAB simulator for the Shadow Position Sensor (SPS) metrology subsystem; later managed the in-flight SPS software.</p></div>
+          <div class="card"><h3>Metis / Solar Orbiter</h3><p>Python GUI converting PDOR/IOR command sequences into TCL files to test the METIS coronagraph on the ground.</p></div>
+          <div class="card"><h3>CorMag / HEMERA</h3><p>Pointing, thermal and communication software for a stratospheric-balloon coronagraph, supported on launch campaigns in Timmins, Canada.</p></div>
+          <div class="card"><h3>Space weather (SWESNET)</h3><p>Automatic detection of CMEs from coronagraph images and drag-based prediction of their arrival time at Earth.</p></div>
+        </div>
+        <p class="mt-3"><a href="cv.html">See the full CV &amp; publications →</a></p>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <small>&copy; <span id="year">2026</span> Francesco Amadori · Astrophysicist</small>
+    <nav class="socials" aria-label="Profiles">
+      <a href="https://orcid.org/0000-0003-1316-1033" target="_blank" rel="noopener" aria-label="ORCID"><svg viewBox="0 0 256 256" aria-hidden="true"><path fill="#A6CE39" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="#fff" d="M86.3 186.2H70.9V79.1h15.4v107.1z"/><path fill="#fff" d="M108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.6-56.8 53.6h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.9-26.5 42.9-39.7 0-21.5-13.7-39.7-43.7-39.7h-23.7v79.4z"/><path fill="#fff" d="M88.7 56.8c0 5.5-4.5 10.1-10.1 10.1-5.6 0-10.1-4.6-10.1-10.1 0-5.6 4.5-10.1 10.1-10.1 5.6 0 10.1 4.5 10.1 10.1z"/></svg></a>
+      <a href="https://github.com/francescoa97outlook" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12 11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.3 4.8 18.3 5.1 18.3 5.1c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5z"/></svg></a>
+      <a href="https://www.ict.inaf.it/gitlab/francesco.amadori" target="_blank" rel="noopener" aria-label="GitLab"><svg viewBox="0 0 24 24" fill="#FC6D26" aria-hidden="true"><path d="m23.6004 9.5927-.0337-.0862L20.3.9814a.851.851 0 0 0-.3362-.405.8748.8748 0 0 0-.9997.0539.8748.8748 0 0 0-.29.4399l-2.2055 6.748H7.5375l-2.2057-6.748a.8573.8573 0 0 0-.29-.4412.8748.8748 0 0 0-.9997-.0537.8585.8585 0 0 0-.3362.4049L.4332 9.5015l-.0325.0862a6.0657 6.0657 0 0 0 2.0119 7.0105l.0113.0087.03.0213 4.976 3.7264 2.462 1.8633 1.4995 1.1321a1.0085 1.0085 0 0 0 1.2197 0l1.4995-1.1321 2.462-1.8633 5.006-3.7489.0125-.01a6.0682 6.0682 0 0 0 2.0094-7.003z"/></svg></a>
+      <a href="https://it.linkedin.com/in/francesco-amadori-42a773160" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9v5.7H9.2V9h3.4v1.6h.1c.5-.9 1.7-1.9 3.4-1.9 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.6V9h3.5v11.4zM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0z"/></svg></a>
+    </nav>
+    <small class="credits-line">Image credits: WASP-107b, NASA, ESA, CSA, R. Crawford (STScI); HD 189733b, NASA, ESA, M. Kornmesser (CC BY 4.0); TNG dome, G. Tessicini (public domain).</small>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
